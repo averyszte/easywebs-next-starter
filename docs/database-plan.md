@@ -10,7 +10,7 @@ the common e-commerce/admin shape) — replace with the client's real domain.
 - **`products`** — `id`, `slug (unique)`, `name`, `description`, `price_cents`, `image_url`,
   `status ('draft' | 'published' | 'archived')`, `stock`, `created_at`, `updated_at`.
 - **`orders`** — `id`, `customer_name`, `customer_email`, `status ('new' | 'paid' | 'fulfilled' |
-  'cancelled')`, `total_cents`, `notes`, `source ('astro' | 'admin')`, `created_at`.
+'cancelled')`, `total_cents`, `notes`, `source ('astro' | 'admin')`, `created_at`.
 - **`order_items`** — `id`, `order_id (FK)`, `product_id (FK)`, `quantity`, `unit_price_cents`.
 - **`leads`** — `id`, `name`, `email`, `message`, `created_at` (from the Astro contact form).
 

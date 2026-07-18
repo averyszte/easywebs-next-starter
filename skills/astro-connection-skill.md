@@ -58,11 +58,11 @@ Not every client has an Astro site. When they don't, ignore this file — the ap
 
 ## Env / secrets split
 
-| Where | Needs |
-|---|---|
-| Next app (Vercel) | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (server), auth |
-| Astro site (Cloudflare) — build | `SUPABASE_URL`, anon key (for build-time reads) |
-| Astro Cloudflare Function | `SUPABASE_SERVICE_ROLE_KEY` (secret, edge only — never in the static bundle) |
+| Where                           | Needs                                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Next app (Vercel)               | `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (server), auth |
+| Astro site (Cloudflare) — build | `SUPABASE_URL`, anon key (for build-time reads)                                                         |
+| Astro Cloudflare Function       | `SUPABASE_SERVICE_ROLE_KEY` (secret, edge only — never in the static bundle)                            |
 
 ## Deploy topology & linking
 

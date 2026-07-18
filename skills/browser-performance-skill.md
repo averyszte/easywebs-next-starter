@@ -1,12 +1,12 @@
 # Browser-Aware Performance Skill
 
-Design visually rich but **mechanically boring** pages — work *with* the browser's rendering pipeline,
+Design visually rich but **mechanically boring** pages — work _with_ the browser's rendering pipeline,
 not against it. Adapted from Addy Osmani's modern-browser writing. Goal: first screen appears fast,
 main content is prioritized, interaction stays smooth, layout never shifts under the user.
 
 ## Principles
 
-1. **Make the first screen cheap.** One clear LCP candidate; it should look mostly right *before*
+1. **Make the first screen cheap.** One clear LCP candidate; it should look mostly right _before_
    hydration. In Next, keep meaningful structure in **Server Components** so the shell isn't blank.
 2. **Prioritize the real LCP element** (hero/product image or headline). Explicit `width`/`height`,
    responsive sources, `fetchpriority="high"`, preload it, and **don't lazy-load** the above-the-fold
@@ -17,7 +17,7 @@ main content is prioritized, interaction stays smooth, layout never shifts under
    explosions. Design every component state (empty, loading, long-text, error, hover/focus, responsive)
    or the browser improvises with layout shifts.
 5. **Prefer compositor-friendly motion** — animate `transform` and `opacity`, not `width/height/top/
-   left/margin/box-shadow`.
+left/margin/box-shadow`.
 6. **`will-change` sparingly** — only on an element about to animate (opening drawer/modal), never blanket.
 7. **Avoid layout thrashing** — no JS read/write/read loops; prefer Grid/Flex, fixed aspect ratios,
    container queries, batched reads/writes, virtualized long lists/tables.

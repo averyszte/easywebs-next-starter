@@ -58,5 +58,5 @@ run the actual feature.
 
 ## Bottom line
 
-Architecture is a system you set up so you can't *not* follow it: CLAUDE.md + typecheck/lint + specific
+Architecture is a system you set up so you can't _not_ follow it: CLAUDE.md + typecheck/lint + specific
 prompts + audits + human review.

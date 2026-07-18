@@ -16,7 +16,7 @@ Fill in per project before building the app. It tells the AI who the app is for.
 
 ## Expected scale
 
-- Users / concurrency at launch and ~12 months: [...]  (drives the stack decision — see CLAUDE.md
+- Users / concurrency at launch and ~12 months: [...] (drives the stack decision — see CLAUDE.md
   "Scaling"). Don't over-engineer, but flag high-scale up front.
 
 ## Brand

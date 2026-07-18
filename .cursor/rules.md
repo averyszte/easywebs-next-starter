@@ -3,6 +3,7 @@ Read all files inside /docs and /skills before making changes.
 These files define project standards and constraints.
 
 Always:
+
 - inspect before editing
 - plan before implementation
 - preserve current architecture
@@ -13,6 +14,7 @@ Always:
 - make targeted edits only
 
 For backend/admin work:
+
 - respect Supabase RLS
 - never expose service role keys
 - preserve auth flow

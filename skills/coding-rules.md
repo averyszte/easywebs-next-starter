@@ -18,16 +18,16 @@ The non-negotiable practices for writing code in this template.
 
 ## Naming conventions
 
-| Kind | Convention | Example |
-|---|---|---|
-| Component file | kebab-case | `product-card.tsx` |
-| Component export | PascalCase | `ProductCard` |
-| Next special files | lowercase | `page.tsx`, `layout.tsx`, `route.ts`, `middleware.ts` |
-| Hook (file / export) | use-kebab.ts / useCamelCase | `use-products.ts` → `useProducts` |
-| Function | camelCase | `formatPrice` |
-| Constant | SCREAMING_SNAKE_CASE | `MAX_PAGE_SIZE` |
-| Type | PascalCase | `Product`, `OrderStatus` |
-| Boolean | is / has / should / can | `isLoading`, `hasAccess` |
+| Kind                 | Convention                  | Example                                               |
+| -------------------- | --------------------------- | ----------------------------------------------------- |
+| Component file       | kebab-case                  | `product-card.tsx`                                    |
+| Component export     | PascalCase                  | `ProductCard`                                         |
+| Next special files   | lowercase                   | `page.tsx`, `layout.tsx`, `route.ts`, `middleware.ts` |
+| Hook (file / export) | use-kebab.ts / useCamelCase | `use-products.ts` → `useProducts`                     |
+| Function             | camelCase                   | `formatPrice`                                         |
+| Constant             | SCREAMING_SNAKE_CASE        | `MAX_PAGE_SIZE`                                       |
+| Type                 | PascalCase                  | `Product`, `OrderStatus`                              |
+| Boolean              | is / has / should / can     | `isLoading`, `hasAccess`                              |
 
 ## Component rules
 

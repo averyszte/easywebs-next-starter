@@ -68,22 +68,22 @@ Swapping a backend or provider changes repository bodies, not signatures.
 
 ## Decision boundaries (what lives where)
 
-| Concern | Lives in |
-|---|---|
-| Shared types | `types/` (DB types generated to `types/database.ts`) |
-| Supabase / external-service calls | `data/*-repository.ts` only |
-| Mutations (create/update/delete) | server actions or `app/api/**/route.ts` → call `data/` |
-| Pure transforms (format price/date, slug) | `lib/` |
-| React client state/effects | `hooks/` or the client component |
-| UI rendering | `components/` |
-| Route / page | `app/**` |
-| Auth guard + role check | `middleware.ts` + dashboard `layout.tsx` (+ RLS in DB) |
-| Server data cache | Next's fetch cache / Server Components; TanStack Query for client data |
+| Concern                                   | Lives in                                                               |
+| ----------------------------------------- | ---------------------------------------------------------------------- |
+| Shared types                              | `types/` (DB types generated to `types/database.ts`)                   |
+| Supabase / external-service calls         | `data/*-repository.ts` only                                            |
+| Mutations (create/update/delete)          | server actions or `app/api/**/route.ts` → call `data/`                 |
+| Pure transforms (format price/date, slug) | `lib/`                                                                 |
+| React client state/effects                | `hooks/` or the client component                                       |
+| UI rendering                              | `components/`                                                          |
+| Route / page                              | `app/**`                                                               |
+| Auth guard + role check                   | `middleware.ts` + dashboard `layout.tsx` (+ RLS in DB)                 |
+| Server data cache                         | Next's fetch cache / Server Components; TanStack Query for client data |
 
 ## Enforcement
 
 1. **CLAUDE.md** — read every session. 2. **`tsc --noEmit`** (typecheck). 3. **ESLint** (`next lint`),
-zero warnings. 4. **Prettier**. 5. **RLS** in the DB. 6. **Code review**.
+   zero warnings. 4. **Prettier**. 5. **RLS** in the DB. 6. **Code review**.
 
 ## Breaking a rule
 

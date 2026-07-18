@@ -27,7 +27,12 @@ multi-select, and `.refine()` for custom rules (e.g. phone) and required checkbo
 import { z } from 'zod';
 
 export const enquirySchema = z.object({
-  name: z.string().trim().min(2).max(100).regex(/^[a-zA-Z\s\-'.]+$/, 'Letters only'),
+  name: z
+    .string()
+    .trim()
+    .min(2)
+    .max(100)
+    .regex(/^[a-zA-Z\s\-'.]+$/, 'Letters only'),
   email: z.string().trim().toLowerCase().email().max(254),
   phone: z.string().trim().min(10).max(20),
   message: z.string().trim().min(10).max(2000),
@@ -85,7 +90,9 @@ export async function POST(req: NextRequest) {
 >
 > ```js
 > // next.config.js
-> module.exports = { experimental: { serverActions: { allowedOrigins: ['client.com', 'app.client.com'] } } };
+> module.exports = {
+>   experimental: { serverActions: { allowedOrigins: ['client.com', 'app.client.com'] } },
+> };
 > ```
 >
 > For plain public cross-origin posts, prefer a route handler with explicit CORS (as above) over

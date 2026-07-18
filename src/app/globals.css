@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+/* ── DESIGN TOKENS ───────────────────────────────────────────────────────────
+   Semantic tokens generate Tailwind utilities (bg-surface, text-heading,
+   bg-brand…). PER CLIENT: replace with the client's brand — mirror the paired
+   Astro site's @theme tokens so the marketing site and app match. */
+@theme {
+  --color-surface: #ffffff;
+  --color-surface-muted: #f6f7f9;
+
+  --color-foreground: #334155;
+  --color-heading: #0f172a;
+  --color-muted: #64748b;
+
+  --color-border: #e5e8ec;
+
+  --color-brand: #4f46e5; /* placeholder brand — change per client */
+  --color-brand-hover: #4338ca;
+  --color-brand-fg: #ffffff;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-surface-muted);
+  color: var(--color-foreground);
+}
