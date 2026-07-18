@@ -32,6 +32,14 @@ Every client app **reuses the backbone** (auth, Supabase wiring, RBAC, dashboard
 tokens) and **adjusts per project**: the DB schema + types, the roles, the screens, and the branding.
 Not every client has a static site — the Astro connection is available when needed, not forced.
 
+## Building a new client app — the PRD gate
+
+For a full new app, run the interactive process in **`APP-BUILD-SYSTEM.md`**: business/app context →
+**PRD (`docs/prd.md`)** → data model + security → UX/visual direction → a complete build plan
+(`docs/current-task.md`) → the **Completeness Check** → the build prompt. The PRD is the contract and
+the completeness check is the safety net: **every feature maps to a screen + action + data + RLS
+policy, or it isn't ready.** Don't build features outside the PRD; don't skip features in it.
+
 ## Project summary
 
 - **Stack:** Next.js (App Router) + TypeScript (strict) + Tailwind + shadcn/ui. Server Components by
